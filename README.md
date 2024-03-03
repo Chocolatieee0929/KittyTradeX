@@ -1,66 +1,30 @@
-## Foundry
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+# KittyTradeX
+## 简介
+KittyTradeX 是一个 DeFi 协议，提供了 DEX（去中心化交易所）和 Stake（质押）两种功能。
+-  **DEX** 它包括闪电贷和交换功能，并提供了预言机服务。
+-  **Stake** 用户可以通过两种方式进行质押并获得收益。一种是通过质押 ETH 挖矿赚取代币，另一种是用户可以通过质押 ETH 获得奖励。
 
-Foundry consists of:
+## 功能
+### DEX（去中心化交易所）
+KittyTradeX 提供了去中心化交易所的功能，包括：
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+1. 闪电贷：用户可以通过闪电贷功能在没有抵押品的情况下进行借贷，从而提高了流动性和资本效率。
+2. Swap：用户可以在 KittyTradeX 上进行代币的交换，实现快速、安全的去中心化交易。
+   
+### Stake（质押）
+Stake 功能分为两种形式：
 
-## Documentation
+1. 质押 ETH 挖矿：用户可以通过质押 ETH 来挖矿获得代币奖励。
+质押奖励：用户可以通过质押 ETH 获得额外的奖励。
+2. 手续费收取与分配
+用户通过质押 ETH 获得奖励, 用户使用 ETH 在 feeAccount 上进行交易，feeAccount 可以收取一定的手续费。手续费将按照质押比例奖励给质押者，这个质押池满足复利功能。
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+使用方法
+用户可以通过 KittyTradeX 的界面进行交易和质押操作。
+在进行交易时，请注意手续费的收取和奖励的分配情况。
+在质押时，请确保理解不同质押方式的奖励机制，并根据自身需求进行选择。
+## 风险提示
+DeFi 协议存在一定的风险，请在使用前仔细阅读使用说明并谨慎操作。
+在进行质押和交易时，请注意市场波动可能带来的风险。
+请注意保护好个人账户的安全，避免遭受钓鱼网站和恶意攻击的损失。
