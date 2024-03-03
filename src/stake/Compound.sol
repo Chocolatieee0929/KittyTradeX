@@ -6,7 +6,7 @@ import '@openzeppelin/contracts/utils/ReentrancyGuard.sol';
 import '@openzeppelin/contracts/utils/math/Math.sol';
 
 /**
- * @title Dex, user可以通过质押ETH获得奖励
+ * @title stake, user可以通过质押ETH获得奖励
  * 用户使用eth在feeAccount上进行交易，feeAccount可以收取一定的手续费
  * 手续费会按照质押比例将手续费奖励给质押者，这个质押池满足复利这一功能
  */

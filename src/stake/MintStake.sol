@@ -10,7 +10,7 @@ import '@openzeppelin/contracts/utils/math/Math.sol';
 import "../interface/INBToken.sol";
 
 /**
- * @title Dex, 质押ETH挖矿赚token
+ * @title stake, 质押ETH挖矿赚token
  */
 contract NBToken is ERC20, ERC20Burnable, INBToken, Ownable, ReentrancyGuard {
   using Math for uint256;
@@ -49,7 +49,7 @@ contract NBToken is ERC20, ERC20Burnable, INBToken, Ownable, ReentrancyGuard {
   function getStakeInfo(address account) internal view returns (uint256, uint256, uint256) {
     return (stakeAccounts[account].stakeAmount, stakeAccounts[account].debt, stakeAccounts[account].initialProfitPerShare);
   }
-  
+
   function _updateStake(address account, uint256 amount, bool add) internal {
     /* update mint totoal per stake*/
     pendingEarn();
